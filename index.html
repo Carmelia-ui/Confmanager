@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./bootstrap-5.3.8-dist/css/bootstrap.min.css">
+     <link rel="stylesheet" href="./fontawesome-free-6.7.2-web/fontawesome-free-6.7.2-web/css/all.min.css">
+</head>
+<body class=" bg-light">
+    <header>
+      <!-- NAVBAR -->
+      <nav class="navbar navbar-expand-md navbar-dark bg-dark p-3">
+        <div class="container">
+          <div><a class="navbar-brand" href="index.html">ConfManager</a></div>
+          <button
+            class="navbar-toggler"
+            data-bs-toggle="collapse"
+            data-bs-target="#menu"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div class="collapse navbar-collapse" id="menu">
+            <!-- Liens -->
+            <ul class="navbar-nav mx-auto">
+              <li class="nav-item">
+                <a class="nav-link text-white" href="index.html">Accueil</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-white" href="./conferences.html"
+                  >Conférences</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-white" href="./intervenantes.html"
+                  >Intervenants</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-white" href="./participants.html"
+                  >Participants</a
+                >
+              </li>
+                <li class="nav-item">
+                <a class="nav-link text-white" href="./intervention.html"
+                  >Interventions</a
+                >
+              
+            </ul>
+            <ul class="navbar-nav ms-auto">
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle text-white"
+                  href="#"
+                  data-bs-toggle="dropdown"
+                  >Admin</a
+                >
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item ms-auto" href="#">Profil</a></li>
+                  <li>
+                    <a class="dropdown-item me-5" href="#">Déconnexion</a>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <!-- section -->
+    <section>
+      <div class="conatiner py-3 mx-auto">
+       <div class="my-5">
+         <h2 class="d-flex justify-content-center aligns-item-center">
+          Bienvenue sur ConfManager
+        </h2>
+        <p class="text-muted d-flex justify-content-center aligns-item-center col-md-6 mx-auto">
+          Gérez facilement les conférences, les intervenants, les participants
+          et les interventions depuis une interface simple et responsive.
+        </p>
+       </div>
+        <div class="row g-3 justify-content-center">
+          <div class="col-12 col-md-6 col-lg-5">
+            <div class="card shadow card-hover text-center text-white bg-primary"onclick="location.href = './conferences.html'">
+              <div class="card-body">
+                <i class="fas fa-calendar-alt display-4 mb-2"></i>
+                <h5 class="card-title">Conférences</h5>
+                <p class="card-text">Voir et ajouter des conférences</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-md-6 col-lg-5">
+            <div class="card shadow card-hover text-center text-white bg-success"onclick="location.href = './intervenantes.html'">
+              <div class="card-body">
+                <i class="fas fa-microphone display-4 mb-2"></i>
+                <h5 class="card-title">Intervenants</h5>
+                <p class="card-text">Gérer les intervenants</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-md-6 col-lg-5">
+      <div class="card shadow card-hover text-center text-white bg-warning" onclick="location.href='./participants.html';">
+        <div class="card-body">
+          <i class="fas fa-users display-4 mb-2"></i>
+          <h5 class="card-title">Participants</h5>
+          <p class="card-text">Inscrire des participants</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-12 col-md-6 col-lg-5">
+      <div class="card shadow card-hover text-center text-white bg-danger" onclick="location.href='./intervention.html';">
+        <div class="card-body">
+          <i class="fas fa-file-alt display-4 mb-2"></i>
+          <h5 class="card-title">Interventions</h5>
+          <p class="card-text">Planifier les interventions</p>
+        </div>
+      </div>
+        </div>
+      </div>
+    </section>
+     <!-- FOOTER -->
+    <footer class="bg-dark text-white mt-auto py-3">
+  <div class="container">
+    <div class="row">
+
+      <!-- COLONNE 1 : A propos -->
+      <div class="col-md-4 mb-3 mb-md-0">
+        <h6 class="fw-bold mb-1">ConfManager</h6>
+        <p class="text-white-50 mb-0" style="font-size: 0.85rem;">
+          Plateforme de gestion des conférences. L'administrateur peut gérer conférences, intervenants, participantes et interventions.
+        </p>
+      </div>
+
+      <!-- COLONNE 2 : Liens rapides (2 par 2) -->
+      <div class="col-md-4 mb-3 mb-md-0">
+        <h6 class="fw-bold mb-2">Liens rapides</h6>
+        <div class="d-flex flex-wrap">
+          <div class="w-50 mb-1">
+            <a href="index.html" class="text-white text-decoration-none">Accueil</a>
+          </div>
+          
+          <div class="w-50 mb-1">
+            <a href="intervenantes.html" class="text-white text-decoration-none">Intervenants</a>
+          </div>
+          <div class="w-50 mb-1">
+            <a href="participants.html" class="text-white text-decoration-none">Participantes</a>
+          </div>
+          <div class="w-50 mb-1">
+            <a href="interventions.html" class="text-white text-decoration-none">Interventions</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- COLONNE 3 : Contact -->
+      <div class="col-md-4 mb-3 mb-md-0">
+        <h6 class="fw-bold mb-1">Contact</h6>
+        <p class="text-white-50 mb-1" style="font-size: 0.85rem;">📍 Cotonou, Bénin</p>
+        <p class="text-white-50 mb-1" style="font-size: 0.85rem;">📧 contact@confmanager.com</p>
+        <p class="text-white-50 mb-0" style="font-size: 0.85rem;">📞 +229 01 44 97 10 00</p>
+      </div>
+
+    </div>
+  </div>
+</footer>
+    <script src="./bootstrap-5.3.8-dist/js/bootstrap.bundle.js"></script>
+</body>
+</html>

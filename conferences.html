@@ -1,0 +1,255 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="./bootstrap-5.3.8-dist/css/bootstrap.min.css"
+    />
+  </head>
+  <body class="bg-light d-flex flex-column min-vh-100">
+    <header>
+      <!-- NAVBAR -->
+      <nav class="navbar navbar-expand-md navbar-dark bg-dark p-3">
+        <div class="container">
+          <div><a class="navbar-brand" href="index.html">ConfManager</a></div>
+          <button
+            class="navbar-toggler"
+            data-bs-toggle="collapse"
+            data-bs-target="#menu"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div class="collapse navbar-collapse" id="menu">
+            <!-- Liens -->
+            <ul class="navbar-nav mx-auto justify-content-center">
+              <li class="nav-item">
+                <a class="nav-link text-white" href="index.html">Accueil</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-white" href="./conferences.html"
+                  >Conférences</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-white" href="./intervenantes.html"
+                  >Intervenants</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-white" href="./participants.html"
+                  >Participants</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-white" href="./intervention.html"
+                  >Interventions</a
+                >
+            </ul>
+            <ul class="navbar-nav ms-auto">
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle text-white"
+                  href="#"
+                  data-bs-toggle="dropdown"
+                  >Admin</a
+                >
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item ms-auto" href="#">Profil</a></li>
+                  <li>
+                    <a class="dropdown-item me-5" href="#">Déconnexion</a>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+                           <!-- section -->
+    <section class="flex-fill">
+      <div class="container my-5"> 
+        <div class="text-center mb-4">
+            <h1 class="fw-bold">Gestion des Conférences</h1>
+        </div>
+    
+        <!-- TITRE + BOUTON AJOUT -->
+        <div class="d-flex justify-content-between align-items-center mb-4">
+           <h3 class="mb-3">Liste des Conférences</h3>
+            <button class="btn btn-success" data-bs-toggle="modal" data-bs-target="#ajouter">+ Ajouter une Conférence</button>
+        </div>
+
+
+        <!-- TABLEAU DES CONFÉRENCES -->
+         <div class="table-responsive">
+          <table class="table table-striped table-bordered">
+            <thead class="table-primary">
+              <tr>
+                <th>Titre</th>
+                <th>Date</th>
+                <th>Heure</th>
+                <th>Lieu</th>
+                <th>Capacité</th>
+                <th>Statut</th>
+                <th>Actions</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Leadership Féminin</td>
+                <td>15 Mars 2026</td>
+                <td>10:00</td>
+                <td>Porto-Novo</td>
+                <td>100</td>
+                <td><span class="badge bg-success">Ouverte</span></td>
+                <td>
+                  <button class="btn btn-sm btn-primary">Modifier</button>
+                  <button class="btn btn-sm btn-danger">Supprimer</button>
+                </td>
+              </tr>
+              <tr>
+                <td>Education et formation</td>
+                <td>20 Avril 2026</td>
+                <td>14:00</td>
+                <td>Cotonou</td>
+                <td>50</td>
+                <td>
+                  <span class="badge bg-warning text-dark"
+                    >Bientôt complète</span
+                  >
+                </td>
+                <td>
+                  <button class="btn btn-sm btn-primary">Modifier</button>
+                  <button class="btn btn-sm btn-danger">Supprimer</button>
+                </td>
+              </tr>
+              <tr>
+                <td>Intelligence Artificielle</td>
+                <td>10 Mai 2026</td>
+                <td>09:00</td>
+                <td>Porto-Novo</td>
+                <td>200</td>
+                <td><span class="badge bg-danger">Complète</span></td>
+                <td>
+                  <button class="btn btn-sm btn-primary">Modifier</button>
+                  <button class="btn btn-sm btn-danger">Supprimer</button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div> 
+
+                   <!--AJOUTER CONFÉRENCE -->
+    <div class="modal"id="ajouter">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title">
+                Ajouter une conférence
+              </h5>
+              <button
+                type="button"class="btn-close"data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body">
+              <form>
+                <div class="mb-3">
+                  <input type="text"class="form-control"id="titre"placeholder="Titre de la conférence"/>
+                </div>
+                <div class="mb-3">
+                  <textarea class="form-control"id="description"rows="3"placeholder="Description de la conférence"></textarea>
+                </div>
+                <div class="mb-3">
+                    <label for="Date" class="form-label">Lieu</label>
+                  <input type="date" class="form-control" id="date" />
+                </div>
+                <div class="mb-3">
+                  <label for="heure" class="form-label">Heure</label>
+                  <input type="time" class="form-control" id="heure" />
+                </div>
+                <div class="mb-3">
+                  <label for="lieu" class="form-label">Lieu</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="lieu"
+                    placeholder="Ex: Paris"
+                  />
+                </div>
+                <div class="mb-3">
+                  <input
+                    type="number"
+                    class="form-control"
+                    id="capacite"
+                    placeholder="Nombre maximum de participants"
+                  />
+                </div>
+                <div class="mb-3">
+                  <label for="statut" class="form-label">Statut</label>
+                  <select class="form-select" id="statut">
+                    <option>Ouverte</option>
+                    <option>Bientôt complète</option>
+                    <option>Complète</option>
+                  </select>
+                </div>
+                <button type="submit" class="btn btn-success w-100">
+                  Ajouter
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section> 
+
+    
+     <!-- FOOTER -->
+    <footer class="bg-dark text-white mt-auto py-3">
+  <div class="container">
+    <div class="row">
+
+      <!-- COLONNE 1 : A propos -->
+      <div class="col-md-4 mb-3 mb-md-0">
+        <h6 class="fw-bold mb-1">ConfManager</h6>
+        <p class="text-white-50 mb-0" style="font-size: 0.85rem;">
+          Plateforme de gestion des conférences. L'administrateur peut gérer conférences, intervenants, participantes et interventions.
+        </p>
+      </div>
+
+      <!-- COLONNE 2 : Liens rapides (2 par 2) -->
+      <div class="col-md-4 mb-3 mb-md-0">
+        <h6 class="fw-bold mb-2">Liens rapides</h6>
+        <div class="d-flex flex-wrap">
+          <div class="w-50 mb-1">
+            <a href="index.html" class="text-white text-decoration-none">Accueil</a>
+          </div>
+          
+          <div class="w-50 mb-1">
+            <a href="intervenantes.html" class="text-white text-decoration-none">Intervenants</a>
+          </div>
+          <div class="w-50 mb-1">
+            <a href="participants.html" class="text-white text-decoration-none">Participantes</a>
+          </div>
+          <div class="w-50 mb-1">
+            <a href="interventions.html" class="text-white text-decoration-none">Interventions</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- COLONNE 3 : Contact -->
+      <div class="col-md-4 mb-3 mb-md-0">
+        <h6 class="fw-bold mb-1">Contact</h6>
+        <p class="text-white-50 mb-1" style="font-size: 0.85rem;">📍 Cotonou, Bénin</p>
+        <p class="text-white-50 mb-1" style="font-size: 0.85rem;">📧 contact@confmanager.com</p>
+        <p class="text-white-50 mb-0" style="font-size: 0.85rem;">📞 +229 01 44 97 10 00</p>
+      </div>
+
+    </div>
+  </div>
+</footer>
+    <script src="./bootstrap-5.3.8-dist/js/bootstrap.bundle.js"></script>
+  </body>
+</html>
